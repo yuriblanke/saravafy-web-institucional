@@ -2,12 +2,23 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 type Props = {
   onInstallClick: () => void;
 };
 
 export function SiteHeader({ onInstallClick }: Props) {
+  const pathname = usePathname();
+
+  function onLogoClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    if (pathname !== "/") return;
+
+    e.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    window.setTimeout(() => window.location.reload(), 0);
+  }
+
   return (
     <header
       className="sticky top-0 z-20 backdrop-blur-[10px]"
@@ -20,6 +31,7 @@ export function SiteHeader({ onInstallClick }: Props) {
             href="/"
             className="inline-flex min-w-0 items-center rounded-[10px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)]"
             aria-label="Ir para a página inicial"
+            onClick={onLogoClick}
           >
             <Image
               src="/images/saravafy-logo-full-dark.png"
