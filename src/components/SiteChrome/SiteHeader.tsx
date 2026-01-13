@@ -12,11 +12,21 @@ type Props = {
 export function SiteHeader({ onInstallClick }: Props) {
   const pathname = usePathname();
 
+  const [hasMounted, setHasMounted] = useState(false);
+
+  useEffect(() => {
+    if (typeof queueMicrotask === "function") {
+      queueMicrotask(() => setHasMounted(true));
+    } else {
+      Promise.resolve().then(() => setHasMounted(true));
+    }
+  }, []);
+
   const showDevThemeToggle = useMemo(() => {
-    if (typeof window === "undefined") return false;
+    if (!hasMounted) return false;
     const host = window.location.hostname;
     return host === "localhost" || host === "127.0.0.1" || host === "::1";
-  }, []);
+  }, [hasMounted]);
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
