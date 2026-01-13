@@ -16,7 +16,7 @@ export function LandingHero({ onInstallClick }: Props) {
         fill
         priority
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[center_62%]"
       />
 
       <div
@@ -34,9 +34,11 @@ export function LandingHero({ onInstallClick }: Props) {
           </p>
 
           <p className="m-0 mt-[14px] text-[14px] leading-[1.5] text-[color:color-mix(in_srgb,var(--saravafy-paper50)_82%,transparent)] min-[960px]:text-[15px]">
-            Aqui, o som é memória.<br />
-            A palavra é ensinamento.<br />
-            E cada ponto é parte de uma herança viva que atravessa gerações.
+            Aqui, o som é memória.
+            <br />
+            A palavra é ensinamento.
+            <br />E cada ponto é parte de uma herança viva que atravessa
+            gerações.
           </p>
 
           <button

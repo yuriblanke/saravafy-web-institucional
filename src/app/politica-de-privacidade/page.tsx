@@ -22,7 +22,11 @@ function stripLeadingTitle(markdown: string): string {
 }
 
 function readPolicyMarkdown(): string {
-  const filePath = path.join(process.cwd(), "public", "politica-de-privacidade.md");
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "politica-de-privacidade.md"
+  );
   return fs.readFileSync(filePath, "utf8");
 }
 
@@ -122,7 +126,10 @@ export default function PrivacyPolicyPage() {
                 </ul>
               ),
               ol: ({ children, ...props }) => (
-                <ol {...props} className="my-0 mb-[14px] list-decimal pl-[22px]">
+                <ol
+                  {...props}
+                  className="my-0 mb-[14px] list-decimal pl-[22px]"
+                >
                   {children}
                 </ol>
               ),

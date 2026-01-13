@@ -23,11 +23,14 @@ function getSupabaseConfig(): SupabaseConfig | null {
   };
 }
 
-async function fetchInstallUrlFresh(signal?: AbortSignal): Promise<string | null> {
+async function fetchInstallUrlFresh(
+  signal?: AbortSignal
+): Promise<string | null> {
   const cfg = getSupabaseConfig();
   if (!cfg) return null;
 
-  const endpoint = cfg.url.replace(/\/$/, "") + "/rest/v1/rpc/get_app_install_url";
+  const endpoint =
+    cfg.url.replace(/\/$/, "") + "/rest/v1/rpc/get_app_install_url";
 
   const res = await fetch(endpoint, {
     method: "POST",
@@ -157,8 +160,14 @@ export function Landing() {
 
   return (
     <div className="min-h-dvh text-[color:var(--saravafy-textPrimaryOnLight)]">
-      <div aria-hidden="true" className={`pointer-events-none fixed inset-0 -z-10 ${backgroundLayer}`} />
-      <div aria-hidden="true" className={`pointer-events-none fixed inset-0 -z-10 ${vignetteLayer}`} />
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none fixed inset-0 -z-10 ${backgroundLayer}`}
+      />
+      <div
+        aria-hidden="true"
+        className={`pointer-events-none fixed inset-0 -z-10 ${vignetteLayer}`}
+      />
 
       <LandingHeader onInstallClick={openModal} />
 
@@ -171,9 +180,9 @@ export function Landing() {
             aria-label="Manifesto"
           >
             <p className="m-0 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy é um projeto cultural e comunitário criado para preservar,
-              registrar e compartilhar pontos de Umbanda com respeito,
-              responsabilidade e acesso livre.
+              O Saravafy é um projeto cultural e comunitário criado para
+              preservar, registrar e compartilhar pontos de Umbanda com
+              respeito, responsabilidade e acesso livre.
             </p>
           </section>
 
@@ -189,20 +198,24 @@ export function Landing() {
             </h2>
 
             <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy nasceu do entendimento de que os pontos de Umbanda não são
-              apenas cantos — são registros históricos, espirituais e culturais.
+              O Saravafy nasceu do entendimento de que os pontos de Umbanda não
+              são apenas cantos — são registros históricos, espirituais e
+              culturais.
             </p>
 
             <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              Cada batida de atabaque carrega um caminho.<br />
-              Cada letra guarda uma história.<br />
+              Cada batida de atabaque carrega um caminho.
+              <br />
+              Cada letra guarda uma história.
+              <br />
               Cada melodia mantém viva a tradição dos terreiros.
             </p>
 
             <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy existe para que esse conhecimento não se perca, não seja
-              distorcido e não seja apropriado de forma irresponsável.<br />
-              É uma casa digital construída pela comunidade, para a comunidade.
+              O Saravafy existe para que esse conhecimento não se perca, não
+              seja distorcido e não seja apropriado de forma irresponsável.
+              <br />É uma casa digital construída pela comunidade, para a
+              comunidade.
             </p>
           </section>
 
@@ -227,8 +240,8 @@ export function Landing() {
                 </div>
                 <div className="mt-2 whitespace-pre-line text-[13px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)]">
                   O conhecimento espiritual não pertence a indivíduos, marcas ou
-                  plataformas. Ele pertence ao povo, à ancestralidade e à vivência
-                  nos terreiros.
+                  plataformas. Ele pertence ao povo, à ancestralidade e à
+                  vivência nos terreiros.
                 </div>
               </div>
 
@@ -237,8 +250,9 @@ export function Landing() {
                   Memória viva
                 </div>
                 <div className="mt-2 whitespace-pre-line text-[13px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)]">
-                  Preservar não é engessar. É manter vivo, acessível e respeitado
-                  aquilo que foi transmitido pela oralidade e pela prática.
+                  Preservar não é engessar. É manter vivo, acessível e
+                  respeitado aquilo que foi transmitido pela oralidade e pela
+                  prática.
                 </div>
               </div>
 
@@ -247,7 +261,9 @@ export function Landing() {
                   Respeito acima de tudo
                 </div>
                 <div className="mt-2 whitespace-pre-line text-[13px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)]">
-                  Sem vaidade.\nSem hierarquia espiritual.\nSem exploração do sagrado.\n\nO Saravafy não cria autoridade — apenas abre espaço.
+                  Sem vaidade.\nSem hierarquia espiritual.\nSem exploração do
+                  sagrado.\n\nO Saravafy não cria autoridade — apenas abre
+                  espaço.
                 </div>
               </div>
             </div>
@@ -292,7 +308,8 @@ export function Landing() {
             </h2>
 
             <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy funciona como um acervo digital acessível por aplicativo.
+              O Saravafy funciona como um acervo digital acessível por
+              aplicativo.
             </p>
 
             <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
@@ -300,7 +317,10 @@ export function Landing() {
             </p>
           </section>
 
-          <footer className="mt-[18px] text-center min-[960px]:mt-7" aria-label="Links legais">
+          <footer
+            className="mt-[18px] text-center min-[960px]:mt-7"
+            aria-label="Links legais"
+          >
             <a
               className="inline-block rounded-[10px] px-3 py-[10px] text-[13px] text-[color:var(--saravafy-textMutedOnLight)] underline focus-visible:outline-none focus-visible:shadow-[0_0_0_3px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)]"
               href="/politica-de-privacidade"
@@ -339,12 +359,13 @@ export function Landing() {
             <ul className="m-0 list-disc pl-5 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)]">
               <li>
                 O Saravafy ainda não está disponível nas lojas oficiais porque é
-                um projeto cultural independente, mantido pela própria comunidade.
+                um projeto cultural independente, mantido pela própria
+                comunidade.
               </li>
               <li>Por isso, o acesso acontece diretamente pelo aplicativo.</li>
               <li>
-                O Android pode pedir uma confirmação extra na primeira instalação
-                — isso é normal e acontece apenas uma vez.
+                O Android pode pedir uma confirmação extra na primeira
+                instalação — isso é normal e acontece apenas uma vez.
               </li>
             </ul>
           </div>
