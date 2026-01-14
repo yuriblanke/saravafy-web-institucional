@@ -24,7 +24,7 @@ export function LandingHero({ onInstallClick }: Props) {
         className="absolute inset-0 bg-[linear-gradient(color-mix(in_srgb,var(--saravafy-forest900)_40%,transparent)_0%,color-mix(in_srgb,var(--saravafy-forest900)_70%,transparent)_100%)]"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[inherit] max-w-[1100px] items-end px-4 pb-7 pt-8 max-[640px]:items-center max-[640px]:pb-[calc(22px+env(safe-area-inset-bottom,0px))] max-[640px]:pt-[22px] min-[960px]:px-6 min-[960px]:pb-[34px] min-[1200px]:px-7">
+      <div className="relative z-10 mx-auto flex min-h-[inherit] max-w-[1100px] items-end px-4 pb-7 pt-8 max-[640px]:items-end max-[640px]:pb-[calc(22px+env(safe-area-inset-bottom,0px))] max-[640px]:pt-[12px] min-[960px]:px-6 min-[960px]:pb-[34px] min-[1200px]:px-7">
         <div className="w-full max-w-[560px] text-center min-[960px]:text-left">
           <h1 className="m-0 text-[34px] leading-[1.08] font-black tracking-[0.2px] text-[color:color-mix(in_srgb,var(--saravafy-paper50)_98%,transparent)] min-[960px]:text-[40px]">
             Saravafy
