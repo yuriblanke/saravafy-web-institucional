@@ -117,7 +117,9 @@ export function AppShowcaseCarousel() {
                   <button
                     key={item.key}
                     type="button"
-                    className={`${styles.dot} ${isActive ? styles.dotActive : ""}`}
+                    className={`${styles.dot} ${
+                      isActive ? styles.dotActive : ""
+                    }`}
                     aria-label={`Ir para slide ${index + 1}`}
                     aria-current={isActive}
                     onClick={() => {
@@ -132,13 +134,14 @@ export function AppShowcaseCarousel() {
             <button
               type="button"
               className={styles.playPause}
+              data-playing={isPlaying ? "true" : "false"}
               aria-label={isPlaying ? "Pausar autoplay" : "Ativar autoplay"}
               onClick={() => {
                 registerInteraction();
                 setIsPlaying((current) => !current);
               }}
             >
-              {isPlaying ? "Pause" : "Play"}
+              <span aria-hidden="true" className={styles.playPauseIcon} />
             </button>
           </div>
         </div>

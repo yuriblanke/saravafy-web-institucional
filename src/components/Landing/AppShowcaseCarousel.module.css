@@ -45,21 +45,71 @@
 }
 
 .playPause {
+  --control-ink: color-mix(in srgb, var(--saravafy-forest900) 72%, transparent);
+
   border: 0;
   background: transparent;
   padding: 6px 8px;
   border-radius: 10px;
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: 0.02em;
-  color: color-mix(in srgb, var(--saravafy-textMutedOnLight) 92%, transparent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  color: var(--control-ink);
   cursor: pointer;
   transition: background-color 180ms ease, color 180ms ease;
 }
 
+.playPauseIcon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  display: block;
+}
+
+/* Default visual: quando NÃO está tocando, mostrar ícone de Play */
+.playPauseIcon::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 4px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 9px;
+  border-color: transparent transparent transparent var(--control-ink);
+  filter: drop-shadow(0 0 0 rgba(0, 0, 0, 0));
+}
+
+.playPauseIcon::after {
+  content: "";
+  display: none;
+}
+
+/* Quando está tocando, mostrar Pause (duas barras) */
+.playPause[data-playing="true"] .playPauseIcon::before,
+.playPause[data-playing="true"] .playPauseIcon::after {
+  display: block;
+  width: 4px;
+  height: 12px;
+  border-radius: 2px;
+  background: var(--control-ink);
+  border: none;
+  top: 1px;
+}
+
+.playPause[data-playing="true"] .playPauseIcon::before {
+  left: 4px;
+}
+
+.playPause[data-playing="true"] .playPauseIcon::after {
+  position: absolute;
+  left: 10px;
+}
+
 .playPause:hover {
   background: color-mix(in srgb, var(--saravafy-paper50) 65%, transparent);
-  color: color-mix(in srgb, var(--saravafy-forest900) 70%, transparent);
+  --control-ink: color-mix(in srgb, var(--saravafy-forest900) 82%, transparent);
 }
 
 .playPause:focus-visible {
@@ -214,8 +264,8 @@
 .screenInner {
   position: relative;
   width: 100%;
-  aspect-ratio: 9 / 19.5;
-  border-radius: 15x;
+  aspect-ratio: 8.8 / 19.5;
+  border-radius: 15px;
   overflow: hidden;
   background: #0b0b0b;
 }
@@ -223,15 +273,15 @@
 .screenImage {
   object-fit: cover;
   object-position: center;
-  transform: translateX(10px) scale(1.02);
+  transform: translateX(0px) translateY(2px) scale(1);
   opacity: 0.88;
-  transition: transform 420ms cubic-bezier(0.2, 0.8, 0.2, 1),
+  transition: transform 420ms cubic-bezier(0.5, 0.8, 0.2, 1),
     opacity 420ms cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Active slide gets a more "alive" screen. */
 .swiper :global(.swiper-slide-active) .screenImage {
-  transform: translateX(0px) scale(1);
+  transform: translateX(0px) translateY(0px) scale(1);
   opacity: 1;
 }
 
