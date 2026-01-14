@@ -171,18 +171,20 @@ export function AppShowcaseCarousel() {
           >
             {items.map((item) => (
               <SwiperSlide key={item.key} className={styles.slide}>
-                <div className={styles.phone}>
-                  <div className={styles.screen}>
-                    <div aria-hidden="true" className={styles.notch} />
-                    <div className={styles.screenInner}>
-                      <Image
-                        src={item.imageSrc}
-                        alt=""
-                        fill
-                        sizes="(max-width: 959px) 70vw, 320px"
-                        className={styles.screenImage}
-                        priority={item.key === "pontos"}
-                      />
+                <div className={styles.phoneViewport}>
+                  <div className={styles.phone}>
+                    <div className={styles.screen}>
+                      <div aria-hidden="true" className={styles.notch} />
+                      <div className={styles.screenInner}>
+                        <Image
+                          src={item.imageSrc}
+                          alt=""
+                          fill
+                          sizes="(max-width: 959px) 70vw, 320px"
+                          className={styles.screenImage}
+                          priority={item.key === "pontos"}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
