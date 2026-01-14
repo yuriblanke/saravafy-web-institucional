@@ -13,7 +13,7 @@ import styles from "./AppShowcaseCarousel.module.css";
 
 type ShowcaseItem = {
   key: "pontos" | "terreiros" | "colecoes" | "player";
-  title: "Pontos" | "Terreiros" | "Coleções" | "Player";
+  title: string;
   copy: string;
   imageSrc: string;
 };
