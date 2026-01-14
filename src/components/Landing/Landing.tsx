@@ -54,17 +54,6 @@ export function Landing() {
 
           <section
             className="mt-4 rounded-[18px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper100)_86%,transparent)] p-4 shadow-[0_16px_42px_color-mix(in_srgb,var(--saravafy-forest900)_14%,transparent)] min-[960px]:mt-[22px] min-[960px]:p-5"
-            aria-label="Manifesto"
-          >
-            <p className="m-0 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy é um projeto cultural e comunitário criado para
-              preservar, registrar e compartilhar pontos de Umbanda com
-              respeito, responsabilidade e acesso livre.
-            </p>
-          </section>
-
-          <section
-            className="mt-4 rounded-[18px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper100)_86%,transparent)] p-4 shadow-[0_16px_42px_color-mix(in_srgb,var(--saravafy-forest900)_14%,transparent)] min-[960px]:mt-[22px] min-[960px]:p-5"
             aria-labelledby="o-que-e"
           >
             <h2
@@ -144,54 +133,6 @@ export function Landing() {
                 </div>
               </div>
             </div>
-          </section>
-
-          <section
-            className="mt-4 rounded-[18px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper100)_86%,transparent)] p-4 shadow-[0_16px_42px_color-mix(in_srgb,var(--saravafy-forest900)_14%,transparent)] min-[960px]:mt-[22px] min-[960px]:p-5"
-            aria-labelledby="o-que-nao-e"
-          >
-            <h2
-              id="o-que-nao-e"
-              className="m-0 mb-2 text-[16px] font-black leading-[1.2] tracking-[0.1px] text-[color:var(--saravafy-textPrimaryOnLight)] min-[960px]:mb-[10px] min-[960px]:text-[18px]"
-            >
-              O que o Saravafy não é
-            </h2>
-
-            <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              Para deixar claro desde o início:
-            </p>
-
-            <ul className="m-0 mt-2 list-disc pl-5 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              <li>Não é comércio da fé</li>
-              <li>Não monetiza o sagrado</li>
-              <li>Não transforma tradição em produto</li>
-              <li>Não substitui o terreiro, a gira ou a vivência espiritual</li>
-            </ul>
-
-            <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy é complemento, registro e memória — nunca substituição.
-            </p>
-          </section>
-
-          <section
-            className="mt-4 rounded-[18px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper100)_86%,transparent)] p-4 shadow-[0_16px_42px_color-mix(in_srgb,var(--saravafy-forest900)_14%,transparent)] min-[960px]:mt-[22px] min-[960px]:p-5"
-            aria-labelledby="como-funciona"
-          >
-            <h2
-              id="como-funciona"
-              className="m-0 mb-2 text-[16px] font-black leading-[1.2] tracking-[0.1px] text-[color:var(--saravafy-textPrimaryOnLight)] min-[960px]:mb-[10px] min-[960px]:text-[18px]"
-            >
-              Como funciona
-            </h2>
-
-            <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              O Saravafy funciona como um acervo digital acessível por
-              aplicativo.
-            </p>
-
-            <p className="m-0 mt-2 text-[14px] leading-[1.45] text-[color:var(--saravafy-textSecondaryOnLight)] min-[960px]:text-[15px] min-[960px]:leading-[1.55]">
-              Tudo isso de forma gratuita, comunitária e respeitosa.
-            </p>
           </section>
 
           <footer
