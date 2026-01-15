@@ -16,7 +16,7 @@ export function LandingHero({ onInstallClick }: Props) {
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[center_62%]"
+        className="object-cover object-[center_60%]"
       />
 
       <div
