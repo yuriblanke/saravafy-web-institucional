@@ -11,7 +11,6 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
   const { installUrl } = useFreshInstallUrl();
 
   const lastFocusedRef = useRef<HTMLElement | null>(null);
-  const previousBodyPaddingRightRef = useRef<string>("");
 
   const openInstallModal = useCallback(() => {
     lastFocusedRef.current = document.activeElement as HTMLElement | null;
@@ -22,27 +21,6 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
     setIsModalOpen(false);
     window.setTimeout(() => lastFocusedRef.current?.focus?.(), 0);
   }, []);
-
-  useEffect(() => {
-    if (!isModalOpen) {
-      document.body.classList.remove("modal-open");
-      document.body.style.paddingRight = previousBodyPaddingRightRef.current;
-      return;
-    }
-
-    previousBodyPaddingRightRef.current = document.body.style.paddingRight;
-    const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    if (scrollbarWidth > 0) {
-      document.body.style.paddingRight = `${scrollbarWidth}px`;
-    }
-    document.body.classList.add("modal-open");
-
-    return () => {
-      document.body.classList.remove("modal-open");
-      document.body.style.paddingRight = previousBodyPaddingRightRef.current;
-    };
-  }, [isModalOpen]);
 
   useEffect(() => {
     function onKeyDown(e: KeyboardEvent) {

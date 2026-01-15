@@ -30,7 +30,3 @@ body {
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   overflow-x: hidden;
 }
-
-body.modal-open {
-  overflow: hidden;
-}
