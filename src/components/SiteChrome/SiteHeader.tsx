@@ -144,7 +144,7 @@ export function SiteHeader({ onInstallClick }: Props) {
               aria-haspopup="dialog"
               aria-controls="installModal"
               disabled={isLoading}
-              className="inline-flex items-center justify-center rounded-[14px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:var(--saravafy-forest600)] px-3 py-2 text-[13px] font-black tracking-[0.1px] text-[color:color-mix(in_srgb,var(--saravafy-paper50)_98%,transparent)] transition-[transform,opacity] duration-150 active:translate-y-[1px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:translate-y-0"
+              className="inline-flex cursor-pointer items-center justify-center rounded-[14px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:var(--saravafy-forest600)] px-3 py-2 text-[13px] font-black tracking-[0.1px] text-[color:color-mix(in_srgb,var(--saravafy-paper50)_98%,transparent)] transition-[transform,opacity] duration-150 active:translate-y-[1px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)] disabled:cursor-not-allowed disabled:opacity-60 disabled:active:translate-y-0"
             >
               Instalar app
             </button>

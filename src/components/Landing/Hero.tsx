@@ -46,7 +46,7 @@ export function LandingHero({ onInstallClick }: Props) {
             onClick={onInstallClick}
             aria-haspopup="dialog"
             aria-controls="installModal"
-            className="mt-4 inline-flex w-full items-center justify-center rounded-[14px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper50)_75%,transparent)] px-[14px] py-3 text-[14px] font-black tracking-[0.1px] text-[color:var(--saravafy-forest900)] transition-[transform,opacity] duration-150 active:translate-y-[1px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)] min-[960px]:w-auto min-[960px]:min-w-[180px]"
+            className="mt-4 inline-flex w-full cursor-pointer items-center justify-center rounded-[14px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper50)_75%,transparent)] px-[14px] py-3 text-[14px] font-black tracking-[0.1px] text-[color:var(--saravafy-forest900)] transition-[transform,opacity] duration-150 active:translate-y-[1px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)] min-[960px]:w-auto min-[960px]:min-w-[180px]"
           >
             Instalar App
           </button>
