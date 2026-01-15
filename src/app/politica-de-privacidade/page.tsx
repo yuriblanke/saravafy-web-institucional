@@ -1,10 +1,13 @@
 import type { Metadata } from "next";
+import { headers } from "next/headers";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 export const metadata: Metadata = {
   title: "Política de Privacidade — Saravafy",
 };
+
+export const dynamic = "force-dynamic";
 
 function extractLastUpdated(markdown: string): string | null {
   const lines = String(markdown || "").split(/\r?\n/);
@@ -19,12 +22,17 @@ function stripLeadingTitle(markdown: string): string {
 }
 
 async function readPolicyMarkdown(): Promise<string> {
-  const baseUrl =
+  const h = await headers();
+  const proto = h.get("x-forwarded-proto") ?? "https";
+  const host = h.get("x-forwarded-host") ?? h.get("host");
+
+  const fallbackBaseUrl =
     process.env.NEXT_PUBLIC_SITE_URL ||
     process.env.SITE_URL ||
     "http://localhost:3000";
 
-  const url = new URL("/politica-de-privacidade.md", baseUrl);
+  const origin = host ? `${proto}://${host}` : fallbackBaseUrl;
+  const url = new URL("/politica-de-privacidade.md", origin);
 
   const response = await fetch(url, { cache: "force-cache" });
   if (!response.ok) {
