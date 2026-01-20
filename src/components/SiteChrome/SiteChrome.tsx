@@ -89,8 +89,6 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
             {installUrl ? (
               <a
                 href={installUrl}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="inline-flex w-full items-center justify-center rounded-[14px] border border-[color:color-mix(in_srgb,var(--saravafy-forest900)_12%,transparent)] bg-[color:color-mix(in_srgb,var(--saravafy-paper50)_92%,transparent)] px-[14px] py-3 text-[14px] font-black tracking-[0.1px] text-[color:var(--saravafy-forest900)] transition-[transform,opacity] duration-150 active:translate-y-[1px] focus-visible:outline-none focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--saravafy-forest400)_32%,transparent)]"
               >
                 Baixar agora
